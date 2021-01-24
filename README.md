@@ -1,11 +1,16 @@
 # facepicker
 顔陽
 
+# Require
+
+face-recognation のインストール時にcmakeが必要になります。
+
 # Install
+
 github.com:OumeNogizakaUnit/facepicker.git
 
 ```
-$ pip install https://github.com/OumeNogizakaUnit/facepicker
+$ pip install git+https://github.com/OumeNogizakaUnit/facepicker
 ```
 
 # Usage
