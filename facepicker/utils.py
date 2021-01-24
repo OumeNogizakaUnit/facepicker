@@ -1,6 +1,6 @@
 import face_recognition
 from pathlib import Path
-from PIL import Image
+from PIL import Image, UnidentifiedImageError
 
 
 def save_face(filepath, savedir, name):
@@ -9,7 +9,11 @@ def save_face(filepath, savedir, name):
     if not savedirpath.exists():
         savedirpath.mkdir(parents=True)
 
-    image = face_recognition.load_image_file(filepath)
+    try:
+        image = face_recognition.load_image_file(filepath)
+    except UnidentifiedImageError as error:
+        print(error)
+        return None
     locations = face_recognition.face_locations(image)
     for (index, location) in enumerate(locations):
         x1, y1, x2, y2 = location
