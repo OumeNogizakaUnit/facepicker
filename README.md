@@ -15,7 +15,7 @@ $ pip install git+https://github.com/OumeNogizakaUnit/facepicker
 
 # Usage
 
-``
+```
 $ facepicker --help
 Usage: facepicker [OPTIONS] IMGDIR
 
